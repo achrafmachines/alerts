@@ -3,11 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>Appointment Alert</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+  }
+  button {
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+</style>
 </head>
 <body>
 <h1>⚠ Appointment Available!</h1>
-<audio autoplay>
+
+<!-- Audio element -->
+<audio id="alertAudio" loop>
   <source src="beep.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
+
+<!-- Play and Pause buttons -->
+<button onclick="document.getElementById('alertAudio').play()">▶ Play</button>
+<button onclick="document.getElementById('alertAudio').pause()">⏸ Pause</button>
+
 </body>
 </html>
